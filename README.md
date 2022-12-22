@@ -55,3 +55,10 @@ Project Organization
 --------
 
 <p><small>Project based on the <a target="_blank" href="https://drivendata.github.io/cookiecutter-data-science/">cookiecutter data science project template</a>. #cookiecutterdatascience</small></p>
+
+To run mlflow, with remote artifact store ( on aws ) 
+
+S3_BUCKET = 's3://enkidupal-ml-bucket'
+f'mlflow server --host 0.0.0.0 --port 5000 --serve-artifacts --artifacts-destination {S3_BUCKET}/'
+
+mlflow server --host 0.0.0.0 --port 5000 --serve-artifacts --artifacts-destination s3://enkidupal-ml-bucket/
